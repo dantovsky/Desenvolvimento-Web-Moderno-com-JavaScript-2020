@@ -315,3 +315,53 @@ function fim(cb) {
 
 exports.default = series(transformacaoJS, fim)
 
+## Forum
+
+=> Pergunta
+
+Gulp para adicionar apenas CSS utilizado
+Dante · Aula 294
+
+Olá professor,
+
+Sabe dizer se existe alguma instrução para o gulp criar um novo arquivo de CSS com apenas os estilos que o HTML está usando? Seria útil, por exemplo, para quando usamos o Bootstrap e normalmente não usamos nem 10% das classes todas existentes no arquivo, deixando assim um monte de "lixo" sendo carregado nas páginas.
+
+Exemplo de um arquivo CSS com 10 estilos:
+
+.estilo1 { ... }
+
+.estilo2 { ... }
+
+.estilo3 { ... }
+
+.estilo4 { ... }
+
+...
+
+.estilo10 { ... }
+
+No HTML eu estaria apenas usando os estilos 1, 2 e 3. Então apenas estes 3 estilos deveriam estar no meu arquivo CSS final gerado com o Gulp.
+
+Obrigado e um grande abraço!
+
+=> Resposta
+
+Jônatas
+
+Olá, pessoal!
+
+Fiquei curioso com a pergunta e fui pesquisar sobre, então me deparei com um artigo (link) que aponta as seguintes ferramentas:
+
+https://github.com/FullHuman/purgecss
+
+https://github.com/purifycss/purifycss
+
+https://github.com/uncss/uncss
+
+Eu só fiz alguns testes básicos online com HTML e CSS nessas ferramentas e funcionaram bem, mas o que achei mais curioso é que teoricamente removem desde CSS em frameworks até CSS injetado por JS (a PurifyCSS parece ser a mais promissora nesse sentido)! E inclusive podem ser implementadas com o Gulp.
+
+Resolvi comentar para caso alguém tenha interesse em aprofundar no assunto e fazer testes com elas.
+
+Espero que seja útil.
+
+Abraços!
